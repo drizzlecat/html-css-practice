@@ -6,6 +6,8 @@
   --color-body:#918ca4;
 }
 
+/*Typography*/
+
 html{
   font-size: 62.5%;
 }
@@ -13,8 +15,7 @@ body{
   font-family: Inter,Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
-  color: var(--color-body);
-  
+  color: var(--color-body); 
 }
 
 h1,h2,h3{
@@ -54,4 +55,33 @@ p{
   h3{
     font-size: 2.4rem;
   }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+.link-arrow{
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.link-arrow::after{
+  content: '-->';
+  margin-left: 5px;
+  transition: margin 0.5;
+}
+
+.link-arrow:hover::after{
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow{
+    font-size: 1.5rem;
+  }
+  
 }
