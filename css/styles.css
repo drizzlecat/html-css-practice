@@ -4,13 +4,21 @@
   --color-accent:#ff3400;
   --color-heading:#1b0760;
   --color-body:#918ca4;
+  --color-border:#ccc;
+  --border-radius: 30px;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
 }
 
 /*Typography*/
-
 html{
   font-size: 62.5%;
 }
+
 body{
   font-family: Inter,Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
@@ -82,8 +90,7 @@ a {
 @media screen and (min-width: 1024px) {
   .link-arrow{
     font-size: 1.5rem;
-  }
-  
+  }  
 }
 
 /* Badges */
@@ -134,7 +141,6 @@ a {
 .list--tick{
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
-
 }
 
 .list--tick .list__item{
@@ -142,13 +148,11 @@ a {
   margin-bottom: 1rem;
 }
 
-@media  and (min-width:1024px) {
+@media screen and (min-width:1024px) {
   .list--tick .list__item{    
     padding-left: 0;
   }
 }
-  
-
 
 /* icons */
 .icon{
@@ -169,3 +173,92 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+/* button */
+.btn{
+  border-radius:40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.btn--primary{
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.btn--primary:hover{
+  background: #3a8ffd;
+}
+
+.btn--secondary{
+  color: #fff;
+  background: var(--color-secondary);
+}
+
+.btn--secondary:hover{
+  background: #00c8eb;
+}
+
+.btn--accent{
+  color: #fff;
+  background: var(--color-accent);
+}
+
+.btn--accent:hover{
+  background: #ec3000;
+}
+
+.btn--block{
+  width:100%;
+  display: inline-block;
+}
+
+.btn--outline{
+  background:#fff ;
+  color: var(--color-heading);
+  border: 2px solid var(--color-heading) ;
+}
+
+.btn--outline:hover{
+  color: #fff;
+  background: var(--color-heading);
+}
+
+@media screen and (min-width:1024px) {
+  .btn{
+    font-size: 1.5rem;
+  }
+}
+
+/* inputs */
+.input{
+  border-radius: var(--border-radius);
+  border: 0;
+  color: var(--color-heading);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+::placeholder{
+  color: #cdcbc7;
+}
+
+.input-group{
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+@media screen and (min-width:1024px) {
+  .input{
+    font-size: 1.5rem;
+  }  
+}
+
