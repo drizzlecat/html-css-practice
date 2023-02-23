@@ -436,7 +436,7 @@ margin-bottom: 4rem;
 
 .quote__image{
   position: relative;
-  bottom: 10px;
+  bottom: 15px;
 }
 
 .quote__company{
@@ -451,6 +451,10 @@ margin-bottom: 4rem;
   font-weight: 500; 
   font-style: normal;
   margin-bottom: 0;
+}
+
+.quote__text{
+  text-align: left;
 }
 
 .quote__text::before{
@@ -606,6 +610,7 @@ content: open-quote;
 
   .block__header{
     text-align: center;
+    margin-bottom: 4rem;
   }
 
   .block__heading{
